@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/signupform.css" />
+<!--  <link href="/css/main.css" rel="stylesheet" />-->
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+  <script type="text/javascript" src="/js/signupform.js"></script>
+
+</head>
+<body style="background-image: url('./assets/img/signup-bg.jpg')">
+    <div th:replace="~{/fragments/navbarUnlogin :: navbar}"></div>
+
+    <form action="" th:action="@{/signUp}" th:object="${member}" method="post">
+      <h1>Sign Up</h1>
+      <label>
+        <p class="label-txt">아이디</p>
+        <input type="text" class="input" name="userid" th:field="*{userid}">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">비밀번호</p>
+    <input type="text" class="input" name="password" th:field="*{password}">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">이름</p>
+    <input type="text" class="input" name="name" th:field="*{name}">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">전화번호</p>
+    <input type="text" class="input" name="phone" th:field="*{phone}">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">주소</p>
+    <input type="text" class="input" name="address" th:field="*{address}">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">이메일</p>
+    <input type="text" class="input" name="email" th:field="*{email}">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+      <label>
+        <p class="label-txt">카메라 ID</p>
+        <input type="text" class="input" name="cameraid" th:field="*{cameraid}">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+  <button type="submit" onclick="javascript:btn()">회원가입</button>
+  <button class="backToMain" onclick="location.href='/'">돌아가기</button>
+</form>
+
+<script>
+  function btn(){
+    alert('회원가입이 완료되었습니다. 로그인해주세요.');
+  }
+</script>
+
+</body>
+</html>
