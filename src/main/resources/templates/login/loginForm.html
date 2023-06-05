@@ -2,7 +2,8 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>O-Potato</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="/css/loginform.css" />
 
@@ -17,8 +18,8 @@
         <form action="/logIn" method="post">
             <h1>Sign in</h1>
             <span>로그인</span>
-            <input type="text" id="userid" name="userid" placeholder="ID" />
-            <input type="password" id="password" name="password" placeholder="Password" />
+            <input type="text" id="userid" name="userid" placeholder="ID" autocomplete="off"/>
+            <input type="password" id="password" name="password" placeholder="Password" autocomplete="off"/>
             <button>Sign In</button>
         </form>
     </div>
